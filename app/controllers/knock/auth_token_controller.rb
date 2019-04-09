@@ -11,9 +11,11 @@ module Knock
   private
     def authenticate
       if !entity.present?
-        raise Knock.not_found_exception_class
+        render json: {msg: "Email not found"}, status: :not_found
+        # raise Knock.not_found_exception_class
       elsif !entity.authenticate(auth_params[:password])
-        raise Knock.wrong_pw_exception_class
+        render json: {msg: "Wrong password"}, status: :not_found
+        # raise Knock.wrong_pw_exception_class
       end
     end
 
