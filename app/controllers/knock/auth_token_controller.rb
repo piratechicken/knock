@@ -10,8 +10,10 @@ module Knock
 
   private
     def authenticate
-      unless entity.present? && entity.authenticate(auth_params[:password])
+      if !entity.present?
         raise Knock.not_found_exception_class
+      elsif !entity.authenticate(auth_params[:password])
+        raise Knock.wrong_pw_exception_class
       end
     end
 
