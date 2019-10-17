@@ -1,19 +1,13 @@
 # knock
 [![Gem Version](https://badge.fury.io/rb/knock.svg)](http://badge.fury.io/rb/knock)
 [![Build Status](https://travis-ci.org/nsarno/knock.svg)](https://travis-ci.org/nsarno/knock)
-[![Test Coverage](https://codeclimate.com/github/nsarno/knock/badges/coverage.svg)](https://codeclimate.com/github/nsarno/knock/coverage)
 [![Code Climate](https://codeclimate.com/github/nsarno/knock/badges/gpa.svg)](https://codeclimate.com/github/nsarno/knock)
-[![Dependency Status](https://gemnasium.com/nsarno/knock.svg)](https://gemnasium.com/nsarno/knock)
 
 Seamless JWT authentication for Rails API
 
 ## Description
 
 Knock is an authentication solution for Rails API-only application based on JSON Web Tokens.
-
-### What are JSON Web Tokens?
-
-[![JWT](http://jwt.io/assets/badge.svg)](http://jwt.io/)
 
 ### Why should I use this?
 
@@ -22,9 +16,9 @@ Knock is an authentication solution for Rails API-only application based on JSON
 - It's [stateless](https://en.wikipedia.org/wiki/Representational_state_transfer#Stateless).
 - It works out of the box with [Auth0](https://auth0.com/docs/server-apis/rails).
 
-### Is this gem going to be maintained?
+### Is this being maintained?
 
-Yes.
+Unfortunately, not at the moment. Feel free to reach out if you want to become a maintainer.
 
 ## Getting Started
 
@@ -45,7 +39,7 @@ Finally, run the install generator:
     $ rails generate knock:install
 
 It will create the following initializer `config/initializers/knock.rb`.
-This file contains all the informations about the existing configuration options.
+This file contains all of the existing configuration options.
 
 If you don't use an external authentication solution like Auth0, you also need to provide a way for users to sign in:
 
